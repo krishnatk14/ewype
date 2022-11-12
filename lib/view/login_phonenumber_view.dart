@@ -37,7 +37,6 @@ class _Login_PhoneNumber_ViewState extends State<Login_PhoneNumber_View> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-
                 height: 200,
                 width: 200,
                 decoration: BoxDecoration(
@@ -49,7 +48,6 @@ class _Login_PhoneNumber_ViewState extends State<Login_PhoneNumber_View> {
               ),
               SizedBox(height: 20,),
 
-              //Image.asset("assets/images/phone_otp", height: 100, width: 100),
               Text("Phone Verification",
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
               SizedBox(height: 15,),
@@ -65,6 +63,8 @@ class _Login_PhoneNumber_ViewState extends State<Login_PhoneNumber_View> {
                 child: Row(
                   children:[
                     SizedBox(width: 10,),
+
+                   //Country Code
                     SizedBox(
                         width:40,
                         child: TextField(
@@ -78,6 +78,8 @@ class _Login_PhoneNumber_ViewState extends State<Login_PhoneNumber_View> {
                     SizedBox(width: 10,),
                     Text("|", style: TextStyle(fontSize: 33, color: Colors.grey),),
                     SizedBox(width: 10,),
+
+                    //Phone no.
                     Expanded(
                         child: TextField(
                           keyboardType: TextInputType.phone,
@@ -87,8 +89,9 @@ class _Login_PhoneNumber_ViewState extends State<Login_PhoneNumber_View> {
                           },
                           decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: "Phone Number"
-                          ),
+                              hintText: "Phone Number",
+
+                            ),
                         ))
                   ],
                 ),

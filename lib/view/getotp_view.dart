@@ -65,12 +65,17 @@ class _GetOTP_ViewState extends State<GetOTP_View> {
                 SizedBox(height: 15,),
                 SizedBox(
                   width: double.infinity,
-                  height: 45,
+                  height: 55,
                   child: ElevatedButton(onPressed: ()async{
-                    PhoneAuthCredential credential = PhoneAuthProvider.credential(verificationId: Login_PhoneNumber_View.verify, smsCode: code);
+                    try{
+                      PhoneAuthCredential credential = PhoneAuthProvider.credential(
+                          verificationId: Login_PhoneNumber_View.verify, smsCode: code);
 
-                    // Sign the user in (or link) with the credential
-                    await auth.signInWithCredential(credential);
+                      // Sign the user in (or link) with the credential
+                      await auth.signInWithCredential(credential);
+                    }catch(e){
+
+                    }
                   },
                     child: Text("Submit", style: TextStyle(fontSize: 19),),
                     style: ElevatedButton.styleFrom(
